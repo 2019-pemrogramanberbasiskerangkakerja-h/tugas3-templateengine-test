@@ -1,0 +1,32 @@
+class {
+	sayHi() {
+		alert('Hi');
+	}
+}
+<!DOCTYPE html>
+style {
+	div {
+		color: green;
+	}
+}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Marko Demo</title>
+</head>
+<body>
+	<h1>Marko Demo</h1>
+	Hello ${data.name}, <br>
+	Your age is ${data.age}
+	${data.np}
+	<ul>
+		<for|nos| of=data.no>
+		<li>${nos}</li>
+		</for>
+		<for|nrps| of=data.nrp>
+		${nrps}
+		</for>
+	</ul>
+	<div>Hello world</div>
+</body>
+</html>
