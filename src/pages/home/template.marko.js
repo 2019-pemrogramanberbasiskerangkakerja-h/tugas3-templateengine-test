@@ -26,32 +26,35 @@ function render(input, out, __component, component, state) {
 
   component_globals_tag({}, out);
 
-  out.w("<h1>Marko Demo</h1> Hello " +
-    marko_escapeXml(data.name) +
-    ", <br> Your age is " +
-    marko_escapeXml(data.age) +
-    marko_escapeXml(data.np) +
-    "<ul>");
+  out.w("<h1>Tugas 3 " +
+    marko_escapeXml(data.kelas) +
+    "</h1><p>Kami menggunakan <b>template " +
+    marko_escapeXml(data.templat) +
+    " </b>untuk tugas template engine.</p><ul>");
 
-  var for__8 = 0;
+  var for__9 = 0;
 
-  marko_forEach(data.no, function(nos) {
-    var keyscope__9 = "[" + ((for__8++) + "]");
+  marko_forEach(data.lists, function(list) {
+    var keyscope__10 = "[" + ((for__9++) + "]");
 
     out.w("<li>" +
-      marko_escapeXml(nos) +
+      marko_escapeXml(list.no) +
+      " NRP: " +
+      marko_escapeXml(list.nrp) +
+      " Nama: " +
+      marko_escapeXml(list.nama) +
+      ", Asal daerah:" +
+      marko_escapeXml(list.asal) +
       "</li>");
   });
 
-  marko_forEach(data.nrp, function(nrps) {
-    out.w(marko_escapeXml(nrps));
-  });
-
-  out.w("</ul><div>Hello world</div>");
+  out.w("</ul><p>Dosen:<b> " +
+    marko_escapeXml(data.dosen) +
+    " </b></p>");
 
   init_components_tag({}, out);
 
-  await_reorderer_tag({}, out, __component, "12");
+  await_reorderer_tag({}, out, __component, "14");
 
   out.w("</body></html>");
 }

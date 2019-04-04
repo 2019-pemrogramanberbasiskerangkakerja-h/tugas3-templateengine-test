@@ -15,18 +15,11 @@ style {
 	<title>Marko Demo</title>
 </head>
 <body>
-	<h1>Marko Demo</h1>
-	Hello ${data.name}, <br>
-	Your age is ${data.age}
-	${data.np}
+	<h1>Tugas 3 ${data.kelas}</h1>
+	<p>Kami menggunakan <b>template ${data.templat} </b>untuk tugas template engine.</p>
 	<ul>
-		<for|nos| of=data.no>
-		<li>${nos}</li>
-		</for>
-		<for|nrps| of=data.nrp>
-		${nrps}
-		</for>
+		<li for(list in data.lists)>${list.no} NRP: ${list.nrp} Nama: ${list.nama}, Asal daerah:${list.asal}</li>
 	</ul>
-	<div>Hello world</div>
+	<p>Dosen:<b> ${data.dosen} </b></p>
 </body>
 </html>
